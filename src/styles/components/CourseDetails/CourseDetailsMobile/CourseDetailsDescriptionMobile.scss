@@ -1,0 +1,65 @@
+@import '../../../config.scss';
+
+.CourseDetailsDescriptionMobile {
+  background-color: white !important;
+  padding: 5px;
+
+  max-width: 100% !important;
+
+  font-size: $xs-font-size !important;
+
+  pre, code {
+    font-family: "Roboto Mono", monospace;
+    background-color: #F6F8FA;
+  }
+
+  pre {
+    padding: 15px;
+  }
+
+  table {
+    width: 100%;
+    max-width: 100%;
+    border-collapse: collapse;
+  }
+
+  table, th, td {
+    border: 1px solid #aaa;
+  }
+
+  th, td {
+    padding: 5px;
+  }
+
+  img {
+    max-width: 100% !important;
+    text-align: center;
+  }
+
+  blockquote {
+    background-color: rgb(250, 249, 249);
+    margin: 16px 0;
+    padding: 8px 20px;
+    border-left: 10px solid #ddd;
+
+    p {
+      background-color: rgb(250, 249, 249);
+      font-style: italic;
+    }
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-weight: 500;
+  }
+
+  p {
+    line-height: 22pt;
+  }
+
+  ul, ol {
+    li {
+      margin-bottom: 6px;
+      line-height: 22pt;
+    }
+  }
+}

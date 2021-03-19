@@ -1,0 +1,52 @@
+html {
+  overflow-x: hidden; 
+}
+
+body {
+  font-family: Roboto, Arial, Helvetica, sans-serif;
+  font-weight: 400;
+  margin: 0;
+  padding: 0;
+  background-color: #fffcfc;
+  overflow-x: hidden;
+  overflow-y: hidden;
+  min-height: 100vh;
+}
+
+.title {
+  font-family: "Open Sans", Roboto, Arial, Helvetica, sans-serif !important;
+}
+
+.error {
+  color: red;
+  text-align: center;
+  margin-bottom: 15px !important;
+}
+
+::-webkit-scrollbar {
+	width: 5px;
+	background-color: #F5F5F5;
+}
+
+::-webkit-scrollbar-track {
+  background: #F5F5F5; 
+  background-color: white;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #bbbbbb;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #BBBBBB;
+}
+
+.no-select {
+  -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+     -khtml-user-select: none; /* Konqueror HTML */
+       -moz-user-select: none; /* Old versions of Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome, Edge, Opera and Firefox */
+}

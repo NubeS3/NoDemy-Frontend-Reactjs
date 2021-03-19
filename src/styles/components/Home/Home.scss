@@ -1,0 +1,53 @@
+@import '../../config.scss';
+
+.Home__hot-categories {
+  background-color: #ffffff;
+  display: flex;
+  justify-content: space-around;
+  box-shadow: 0 2px 4px rgba(0,0,0,.08), 0 4px 12px rgba(0,0,0,.08);
+}
+
+.Home__hot-categories__category {
+  height: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  cursor: pointer;
+  padding: 0 10px;
+  font-size: $xs-font-size;
+
+  a {
+    text-decoration: none !important;
+    color: inherit !important;
+  }
+}
+
+.Home__hot-categories__category:hover {
+  background-color: #eeeeee; 
+}
+
+.Home__content {
+  width: 1340px;
+  margin: auto;
+  margin-bottom: 50px;
+}
+
+.Home__content__title {
+  margin-top: 40px !important;
+  margin-bottom: 10px !important;
+}
+
+@media only screen and (max-width: $l-screen-width) {
+  .Home__hot-categories__category {
+    font-size: $xxs-font-size;
+  }
+
+  .Home__content {
+    width: calc(100% - 20px);
+    padding: 0 10px;
+  }
+
+  .Home__content__title {
+    font-size: $s-font-size !important;
+  }  
+}

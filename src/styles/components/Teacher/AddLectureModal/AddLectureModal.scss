@@ -1,0 +1,57 @@
+@import '../../../config.scss';
+
+.AddLectureModal {
+  position: absolute;
+  background-color: white;
+  border: none;
+  box-shadow:
+    0px 3px 5px -1px rgba(0,0,0,0.2),
+    0px 5px 8px 0px rgba(0,0,0,0.14),
+    0px 1px 14px 0px rgba(0,0,0,0.12);
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  outline: none;
+  width: 420px;
+}
+
+.AddLectureModal__app-bar {
+  background-color: $primary-color !important;
+}
+
+.AddLectureModal__body {
+  padding: 15px;
+}
+
+.AddLectureModal__footer {
+  padding: 15px;
+  text-align: right;
+}
+
+.AddLectureModal__buttons {
+  color: white !important;
+  background-color: $primary-color !important;
+}
+
+.AddLectureModal__buttons--secondary {
+  background-color: $secondary-color !important;
+  margin-right: 10px !important;
+}
+
+.AddLectureModal__upload {
+  margin-top: 30px !important;
+  width: 100% !important;
+  padding: 15px !important;
+  border: 1px solid $primary-color !important;
+  text-transform: none !important;
+}
+
+.MuiLinearProgress-barColorPrimary {
+  background-color: $primary-color !important;
+}
+
+@media only screen and (max-width: $s-screen-width) {
+  .AddLectureModal {
+    width: 100%;
+  }
+}

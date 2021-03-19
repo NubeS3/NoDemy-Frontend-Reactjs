@@ -1,0 +1,38 @@
+@import '../../config.scss';
+
+.Register__wrapper {
+  margin: 20px auto !important;
+}
+
+.Register__paper {
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+.Register__title {
+  text-align: center;
+  margin-bottom: 30px !important;
+}
+
+.Register__text-field {
+  width: 100%;
+  margin-bottom: 30px !important;
+}
+
+.Register__button {
+  width: 100%;
+  background-color: $primary-color !important;
+  color: white !important;
+  padding: 10px !important;
+  margin-top: 10px !important;
+}
+
+.Register__description {
+  text-align: center;
+}
+
+.Register__description__link {
+  text-decoration: none;
+  color: $primary-color;
+  font-weight: 500;
+}

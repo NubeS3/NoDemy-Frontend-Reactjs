@@ -1,0 +1,20 @@
+@import '../../../config.scss';
+
+.CourseDetailsBodyPc {
+  width: 920px !important;
+  margin-left: calc((100% - 1400px) / 2) !important;
+}
+
+.CourseDetailsBodyPc__tabs {
+  background-color: $secondary-color !important;
+  color: white !important;
+}
+
+.CourseDetailsBodyPc__tab {
+  color: white !important;
+  font-weight: 600 !important;
+}
+
+.PrivateTabIndicator-root-1 {
+  display: none !important;
+}

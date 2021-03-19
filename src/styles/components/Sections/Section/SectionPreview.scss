@@ -1,0 +1,21 @@
+@import '../../../config.scss';
+
+.SectionPreview {
+  width: calc(100% - 40px);
+  border: 1px solid #dcdacb;
+  border-bottom: none;
+  padding: 20px;
+  cursor: pointer;
+  background-color: rgb(251, 251, 248);
+  display: flex;
+  justify-content: space-between;
+}
+
+.SectionPreview--last {
+  border-bottom: 1px solid #dcdacb;
+}
+
+.SectionPreview__info {
+  margin: 0;
+  font-size: $xxs-font-size;
+}

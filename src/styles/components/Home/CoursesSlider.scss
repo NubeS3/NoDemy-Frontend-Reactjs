@@ -1,0 +1,35 @@
+@import '../../config.scss';
+
+.CoursesSlider {
+  display: flex;
+  justify-content: space-between;
+}
+
+.CoursesSlider__buttons {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.CoursesSlider__buttons__button {
+  background-color: white !important;
+  box-shadow: 0 2px 4px rgba(0,0,0,.08), 0 4px 12px rgba(0,0,0,.08);
+}
+
+.CoursesSlider__buttons__button--left {
+  margin-right: 20px !important;
+}
+
+.CoursesSlider__buttons__button--right {
+  margin-left: 20px !important;
+}
+
+@media only screen and (max-width: $l-screen-width) {
+  .CoursesSlider__buttons__button--left {
+    margin: 0 5px !important;
+  }
+
+  .CoursesSlider__buttons__button--right {
+    margin: 0 5px !important
+  }
+}

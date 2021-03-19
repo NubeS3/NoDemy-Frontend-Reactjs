@@ -1,0 +1,30 @@
+@import '../../../config.scss';
+
+.TeacherListLectures {
+  width: 1000px;
+  margin: auto;
+  margin-top: 30px;
+  padding: 0 10px;
+}
+
+.TeacherListLectures__header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 30px;
+}
+
+.TeacherListLectures__search-lectures {
+  flex-grow: 1;
+}
+
+.TeacherListLectures__add-lecture {
+  background-color: $primary-color !important;
+  color: white !important;
+  margin-left: 10px !important;
+}
+
+@media only screen and (max-width: 1100px) {
+  .TeacherListLectures {
+    width: calc(100% - 20px);
+  }
+}

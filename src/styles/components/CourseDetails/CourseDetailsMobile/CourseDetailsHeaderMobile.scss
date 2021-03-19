@@ -1,0 +1,113 @@
+@import '../../../config.scss';
+
+.CourseDetailsHeaderMobile__course-basic-info {
+  position: relative;
+  background-color: #1e1e1c;
+  color: white;
+  padding: 10px;
+  padding-bottom: 0;
+}
+
+.CourseDetailsHeaderMobile__title {
+  font-size: $m-font-size !important;
+  margin-bottom: 20px !important;
+}
+
+.CourseDetailsHeaderMobile__summary {
+  font-size: $xs-font-size !important;
+  line-height: 1.8;
+}
+
+.CourseDetailsHeaderMobile__average-ratings {
+  font-weight: 600;
+  display: inline;
+  font-size: $xs-font-size;
+  margin: 0 8px 0 0;
+  color: #eb8a2f !important;
+}
+
+.CourseDetailsHeaderMobile__rating-star {
+  color: #eb8a2f;
+  font-size: $xxs-font-size !important;
+  position: relative;
+  bottom: 1px;
+}
+
+.CourseDetailsHeaderMobile__total-ratings {
+  display: inline;
+  font-size: $xxs-font-size;
+  margin: 0 8px 0 8px;
+}
+
+.CourseDetailsHeaderMobile__total-registered {
+  display: inline;
+  font-size: $xxs-font-size;
+}
+
+.CourseDetailsHeaderMobile__cover-wrapper {
+  text-align: center;
+
+  img {
+    max-width: 80%;
+    position: relative;
+    top: 4px;
+  }
+}
+
+.CourseDetailsHeaderMobile__course-actions {
+  padding: 10px;
+}
+
+.CourseDetailsHeaderMobile__buttons {
+  width: 100% !important;
+  background-color: $primary-color !important;
+  color: white !important;
+  padding: 10px !important;
+}
+
+.CourseDetailsHeaderMobile__buttons--secondary {
+  background-color: $secondary-color !important;
+}
+
+.CourseDetailsHeaderMobile__price {
+  display: flex;
+  justify-content: flex-start;
+  align-self: center;
+}
+
+.CourseDetailsHeaderMobile__price__sale {
+  font-weight: 600 !important;
+  font-size: $m-font-size !important;
+  margin: 10px 0 !important;
+}
+
+.CourseDetailsHeaderMobile__price__original-price {
+  text-decoration: line-through;
+  margin: 0;
+  margin-left: 15px;
+  font-size: 20px;
+  color: #73726c;
+}
+
+.CourseDetailsHeaderMobile__price__original-price--ratio {
+  text-decoration: none;
+  font-size: 20px;
+}
+
+.CourseDetailsHeaderMobile__avatar {
+  margin-top: 20px;
+  img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    border: 1px solid #eeeeee;
+  }
+}
+
+.CourseDetailsHeaderMobile__course-author {
+  background-color: white !important;
+  box-shadow: 0 2px 4px rgba(0,0,0,.08), 0 4px 12px rgba(0,0,0,.08);
+  margin: 0 10px;
+  padding-bottom: 10px;
+  padding-top: 10px;
+}

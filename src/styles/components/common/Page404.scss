@@ -1,0 +1,42 @@
+@import '../../config.scss';
+
+.Page404 {
+  text-align: center;
+}
+
+.Page404__title {
+  color: $primary-color;
+  margin-bottom: 40px;
+}
+
+.Page404__description--link {
+  color: $primary-color;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+@media only screen and (min-width: $xs-screen-width) {
+  .Page404__title {
+    font-size: $l-font-size;
+  }
+
+  .Page404__description {
+    font-size: $xs-font-size;
+  }
+}
+
+@media only screen and (min-width: $s-screen-width) {
+  .Page404__title {
+    font-size: $xl-font-size;
+  }
+
+  .Page404__description {
+    font-size: $s-font-size;
+  }
+}
+
+@media only screen and (min-width: $m-screen-width) {
+  .Page404__title {
+    font-size: $xxl-font-size;
+  }
+}

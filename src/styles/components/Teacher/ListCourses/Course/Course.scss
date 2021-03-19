@@ -1,0 +1,33 @@
+@import '../../../../config.scss';
+
+.TeacherCourse {
+  padding: 15px;
+  box-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2), 0px 1px 1px 0px rgba(0,0,0,0.14), 0px 1px 3px 0px rgba(0,0,0,0.12);
+  margin-bottom: 40px;
+  border-radius: 4px;
+}
+
+.TeacherCourse__cover {
+  max-width: 240px;
+}
+
+.TeacherCourse__right {
+  display: flex;
+  justify-content: space-between;
+}
+
+.TeacherCourse__actions {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.TeacherCourse__actions__buttons {
+  padding: 10px !important;
+  font-size: $xs-font-size !important;
+}
+
+.TeacherCourse__price {
+  display: flex;
+  align-items: center;
+}

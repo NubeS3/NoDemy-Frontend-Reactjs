@@ -1,0 +1,112 @@
+@import '../../config.scss';
+
+.HeaderPc {
+  position: relative;
+  height: 65px;
+  background-color: white;
+  border-bottom: 1px solid #eeeeee;
+  padding: 0 30px;
+  display: flex;
+  align-items: center;
+}
+
+.HeaderPc__logo-link {
+  height: 50px !important;
+  padding: 0 !important;
+  display: flex;
+  color: $primary-color;
+  text-decoration: none;
+  font-weight: bold;
+  align-items: center;
+}
+
+.HeaderPc__logo-link__name {
+  margin: 0 !important;
+  margin-left: 10px !important;
+  font-size: $s-font-size !important;
+  flex: 1;
+}
+
+.HeaderPc__buttons {
+  margin-left: 20px !important;
+  text-transform: none !important;
+  font-size: $xs-font-size !important;
+  font-weight: 400 !important;
+}
+
+.HeaderPc__search-bar {
+  flex-grow: 1;
+  margin-left: 20px;
+  position: relative;
+
+  input {
+    width: calc(100% - 70px);
+    font-size: $xs-font-size;
+    outline: none;
+    padding: 12px;
+    padding-left: 50px;
+    border-radius: 23px;
+    border: 1px solid #aaaaaa;
+  }
+}
+
+.HeaderPc__search-bar__icon {
+  position: absolute;
+  left: 10px;
+  font-size: $s-font-size;
+  top: 8px;
+  height: 30px;
+  color: #aaaaaa;
+}
+
+.HeaderPc__icon {
+  width: 28px;
+  margin-left: 20px;
+  cursor: pointer;
+}
+
+.HeaderPc__icon--logged-in {
+  margin-left: 10px;
+}
+
+.HeaderPc__buttons--login {
+  border-color: $secondary-color !important;
+  font-weight: 600 !important;
+  background-color: $secondary-color !important;
+  color: white !important;
+  
+  a {
+    text-decoration: none !important;
+    color: white !important;
+  }
+}
+
+.HeaderPc__buttons--register {
+  background-color: $primary-color !important;
+  color: white !important;
+  margin-left: 5px !important;
+  border-color: $primary-color !important;
+  font-weight: 600 !important;
+
+  a {
+    text-decoration: none !important;
+    color: white !important;
+  }
+}
+
+.HeaderPc__avatar {
+  height: 65px !important;
+  padding: 0 !important;
+  align-items: center;
+  margin-left: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 1px solid #eeeeee;
+  }
+}

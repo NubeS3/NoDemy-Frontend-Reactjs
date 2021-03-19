@@ -1,0 +1,94 @@
+@import '../../config.scss';
+
+.UserMenuPc {
+  position: absolute;
+  width: 300px;
+  top: 65px;
+  right: 20px;
+  z-index: 15;
+  background-color: white !important;
+  box-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2), 0px 1px 1px 0px rgba(0,0,0,0.14), 0px 1px 3px 0px rgba(0,0,0,0.12);
+  padding: 20px 0;
+  border-top: 1px solid #eeeeee;
+}
+
+.UserMenuPc__basic-info {
+  display: flex;
+}
+
+.UserMenuPc__avatar {
+  width: 80px;
+  padding-left: 15px;
+  padding-right: 10px;
+  margin-bottom: 15px;
+  cursor: pointer;
+
+  img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    border: 1px solid #eeeeee;
+  }
+}
+
+.UserMenuPc__divider {
+  border-top: 1px solid #eeeeee;
+}
+
+.UserMenuPc__info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: calc(100% - 115px);
+  padding-right: 15px;
+  margin-bottom: 15px;
+}
+
+.UserMenuPc__info__text {
+  display: -webkit-box !important;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: normal;
+  font-size: $xxs-font-size !important;
+  margin: 5px 0 2px 0 !important;
+  cursor: pointer;
+}
+
+.UserMenuPc__info__text--fullname {
+  font-size: $xs-font-size !important;
+  font-weight: 600 !important;
+  color: $primary-color !important;
+
+  a {
+    color: $primary-color !important;
+    text-decoration: none !important;
+  }
+}
+
+.UserMenuPc__account-courses {
+  padding: 15px 25px;
+}
+
+.UserMenuPc__buttons {
+  margin: 10px 0 !important;
+
+  a {
+    text-decoration: none;
+    color: inherit !important;
+  }
+
+  a:hover {
+    color: $primary-color !important;
+  }
+}
+
+.UserMenuPc__buttons:hover {
+  color: $primary-color !important;
+}
+
+.UserMenuPc__account-courses--logout {
+  padding: 5px 25px;
+  cursor: pointer;
+}
