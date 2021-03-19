@@ -1,0 +1,105 @@
+@import "../../config.scss";
+
+.Profile__wrapper {
+    margin: 40px auto !important;
+}
+
+.Profile__paper-sidebar {
+    padding: 20px;
+    height: 400px;
+    box-shadow: 0px 2px 1px -1px rgba(0, 0, 0, 0.2), 0px 1px 1px 0px rgba(0, 0, 0, 0.14),
+        0px 1px 3px 0px rgba(0, 0, 0, 0.12);
+}
+
+.Profile__paper-content {
+    padding: 20px;
+    height: 400px;
+    box-shadow: 0px 2px 1px -1px rgba(0, 0, 0, 0.2), 0px 1px 1px 0px rgba(0, 0, 0, 0.14),
+        0px 1px 3px 0px rgba(0, 0, 0, 0.12);
+}
+
+.Profile__avatar {
+    width: 120px;
+    margin: auto !important;
+
+    img {
+        width: 120px;
+        height: 120px;
+        max-width: 100%;
+        max-height: 100%;
+        border-radius: 100%;
+        border: 1px solid #eeeeee;
+    }
+
+    input {
+        display: none;
+    }
+}
+
+.Profile__title {
+    text-align: left;
+    font-weight: 600 !important;
+    margin-top: 20px !important;
+    margin-bottom: 30px !important;
+}
+.Profile__text-field {
+    width: 100%;
+    margin-bottom: 20px !important;
+}
+
+.Avatar__title {
+    text-align: center;
+    display: -webkit-box !important;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: normal;
+    font-weight: 600 !important;
+    font-size: $xs-font-size !important;
+    margin: 5px 0 30px 0 !important;
+}
+
+.Sidebar__option-title {
+    border-radius: 3px;
+    padding: auto !important;
+    .Option-button {
+        width: 100% !important;
+    }
+}
+
+.Sidebar__option-title-clicked {
+    padding: auto !important;
+    background-color: $primary-color;
+    border-radius: 3px;
+    .Option-button {
+        width: 100% !important;
+        color: white;
+    }
+}
+
+.Profile__content-button {
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+    .Profile__update-button-custom {
+        width: auto !important;
+        border-radius: 3px;
+        background-color: $primary-color !important;
+        margin-left: 20px;
+        color: white;
+    }
+
+    .Profile__cancel-button-custom {
+        width: auto !important;
+        border-radius: 3px;
+        background-color: $secondary-color !important;
+        color: white;
+    }
+}
+
+@media only screen and (max-width: $m-screen-width) {
+    .Profile__paper-sidebar {
+        height: 260px;
+    }
+}

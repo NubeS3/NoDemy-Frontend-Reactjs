@@ -1,0 +1,15 @@
+@import '../../../config.scss';
+
+.CellCourse {
+  width: 240px !important;
+  height: 310px !important;
+  margin: 20px !important;
+}
+
+.CellCourse__cover-wrapper {
+  width: 240px;
+
+  img {
+    width: 240px;
+  }
+}

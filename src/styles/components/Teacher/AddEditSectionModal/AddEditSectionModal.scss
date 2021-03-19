@@ -1,0 +1,45 @@
+@import '../../../config.scss';
+
+.AddEditSectionModal {
+  position: absolute;
+  background-color: white;
+  border: none;
+  box-shadow:
+    0px 3px 5px -1px rgba(0,0,0,0.2),
+    0px 5px 8px 0px rgba(0,0,0,0.14),
+    0px 1px 14px 0px rgba(0,0,0,0.12);
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  outline: none;
+  width: 420px;
+}
+
+.AddEditSectionModal__app-bar {
+  background-color: $primary-color !important;
+}
+
+.AddEditSectionModal__body {
+  padding: 15px;
+}
+
+.AddEditSectionModal__footer {
+  padding: 15px;
+  text-align: right;
+}
+
+.AddEditSectionModal__buttons {
+  color: white !important;
+  background-color: $primary-color !important;
+}
+
+.AddEditSectionModal__buttons--secondary {
+  background-color: $secondary-color !important;
+  margin-right: 10px !important;
+}
+
+@media only screen and (max-width: $s-screen-width) {
+  .AddEditSectionModal {
+    width: 100%;
+  }
+}

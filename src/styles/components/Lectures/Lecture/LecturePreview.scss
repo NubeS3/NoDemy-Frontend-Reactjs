@@ -1,0 +1,21 @@
+@import '../../../config.scss';
+
+.LecturePreview {
+  margin-left: 10px;
+  margin-right: 8px;
+  padding: 20px;
+  padding-left: 40px;
+  display: flex;
+  justify-content: space-between;
+  border-left: 1px solid #dcdacb;
+  border-right: 1px solid #dcdacb;
+}
+
+.LecturePreview__preview {
+  margin: 0;
+  font-size: $xxs-font-size;
+}
+
+.LecturePreview--can-preview {
+  color: $primary-color;
+}

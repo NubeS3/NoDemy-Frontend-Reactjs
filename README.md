@@ -1,1 +1,5 @@
-# NoDemy-Frontend-Reactjs
+# Run app (Development):
+
+```
+yarn start
+```

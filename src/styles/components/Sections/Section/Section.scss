@@ -1,0 +1,20 @@
+@import '../../../config.scss';
+
+.Section {
+  border: 1px solid #dcdacb;
+  border-bottom: none;
+  padding: 15px;
+  cursor: pointer;
+  background-color: rgb(251, 251, 248);
+  display: flex;
+  justify-content: space-between;
+}
+
+.Section--last {
+  border-bottom: 1px solid #dcdacb;
+}
+
+.Section__info {
+  margin: 0;
+  font-size: $xxs-font-size;
+}

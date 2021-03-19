@@ -1,0 +1,14 @@
+@import '../../../config.scss';
+
+.Lecture {
+  padding: 15px;
+  cursor: pointer;
+  border-left: 1px solid #dcdacb;
+  border-right: 1px solid #dcdacb;
+  background-color: white;
+}
+
+.Lecture--active {
+  background-color: $primary-color;
+  color: white;
+}

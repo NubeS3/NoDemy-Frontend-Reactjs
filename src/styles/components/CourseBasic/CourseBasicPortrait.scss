@@ -1,0 +1,73 @@
+@import '../../config.scss';
+
+.CourseBasicPortrait {
+  max-width: 240px !important;
+  width: 240px;
+  height: 360px;
+}
+
+.CourseBasicPortrait__media {
+  height: 135px;
+}
+
+.CourseBasicPortrait__title {
+  display: -webkit-box !important;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: normal;
+  font-weight: 600 !important;
+  font-size: $xs-font-size !important;
+  line-height: 1.2 !important;
+}
+
+.CourseBasicPortrait__author {
+  color: #73726c !important;
+  font-size: $xxxs-font-size !important;
+  display: -webkit-box !important;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: normal;
+}
+
+.CourseBasicPortrait__rating__star-number {
+  font-weight: 600;
+  display: inline;
+  font-size: $xs-font-size;
+  margin: 0 8px 0 0;
+  color: #eb8a2f !important;
+}
+
+.CourseBasicPortrait__rating__star {
+  color: #eb8a2f;
+  font-size: $xxs-font-size !important;
+  position: relative;
+  bottom: 1px;
+}
+
+.CourseBasicPortrait__rating__total-rating {
+  display: inline;
+  font-size: $xxs-font-size;
+  margin: 0 0 0 8px;
+}
+
+.CourseBasicPortrait__price {
+  margin-top: 10px;
+  margin-bottom: 5px;
+}
+
+.CourseBasicPortrait__price__current-price {
+  display: inline;
+  font-size: $xs-font-size;
+  font-weight: 600 !important;
+}
+
+.CourseBasicPortrait__price__original-price {
+  display: inline;
+  font-size: $xxs-font-size;
+  color: #73726c;
+  text-decoration: line-through;
+}

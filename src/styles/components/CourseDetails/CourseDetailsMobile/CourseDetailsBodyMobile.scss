@@ -1,0 +1,13 @@
+@import '../../../config.scss';
+
+.CourseDetailsBodyMobile {
+  padding: 10px;
+}
+
+.CourseDetailsBodyMobile__buttons {
+  width: 100%;
+  margin-top: 5px !important;
+  background-color: $primary-color !important;
+  color: white !important;
+  padding: 10px !important;
+}

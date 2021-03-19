@@ -1,0 +1,55 @@
+@import '../config.scss';
+
+.Login__wrapper {
+  margin: 30px auto !important;
+}
+
+.Login__paper {
+  padding: 20px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.Login__title {
+  text-align: center;
+  margin-bottom: 30px !important;
+}
+
+.Login__text-field {
+  width: 100%;
+  margin-bottom: 30px !important;
+}
+
+.Login__button {
+  width: 100%;
+  background-color: $primary-color !important;
+  color: white !important;
+  padding: 10px !important;
+  margin-top: 10px !important;
+}
+
+.Login__description {
+  text-align: center;
+}
+
+.Login__description--margin {
+  margin: 20px 0 !important;
+  color: rgba(0, 0, 0, 0.7) !important;
+}
+
+.Login__description__link {
+  text-decoration: none;
+  color: $primary-color;
+  font-weight: 500;
+}
+
+.Login__google-button {
+  background-color: white !important;
+  font-weight: 600 !important;
+  height: 40px !important;
+  padding-left: 8px !important;
+  padding-right: 8px !important;
+  font-size: 14px !important;
+  color: rgba(0, 0, 0, 0.54) !important;
+  text-transform: none !important;
+}

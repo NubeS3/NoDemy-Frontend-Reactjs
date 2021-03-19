@@ -1,0 +1,77 @@
+@import '../../config.scss';
+
+.ListCourses {
+  width: 1000px;
+  margin: auto;
+  margin-bottom: 30px;
+  margin-top: 20px;
+}
+
+.ListCourses__title {
+  font-size: $m-font-size !important;
+  margin: 10px 0 20px 0 !important;
+  display: -webkit-box !important;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: normal;
+}
+
+.ListCourses__query {
+  display: flex;
+  margin-bottom: 20px;
+}
+
+.ListCourses__query__categories {
+  width: 50%;
+  margin: 10px 10px 10px 0;
+}
+
+.ListCourses__query__sort {
+  width: 50%;
+  margin: 10px 0px 10px 10px;
+}
+
+.ListCourses__query__categories__form-control {
+  width: 100%;
+  background-color: white !important;
+}
+
+.ListCourses__query__sort__form-control {
+  width: 100%;
+  background-color: white !important;
+}
+
+.Mui-selected {
+  background-color: $primary-color !important;
+  color: white !important;
+}
+
+@media only screen and (max-width: $l-screen-width) {
+  .ListCourses {
+    width: calc(100% - 20px);
+    padding: 0 10px !important;
+    margin-top: 10px;
+  }
+}
+
+@media only screen and (max-width: $m-screen-width) {
+  .ListCourses__title {
+    font-size: $s-font-size !important;
+  }
+  
+  .ListCourses__query {
+    display: block;
+  }
+
+  .ListCourses__query__categories {
+    width: 100%;
+    margin: 0 0 10px 0;
+  }
+  
+  .ListCourses__query__sort {
+    width: 100%;
+    margin: 10px 0;
+  }
+}

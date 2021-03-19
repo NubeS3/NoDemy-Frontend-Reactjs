@@ -1,0 +1,30 @@
+@import '../../../config.scss';
+
+.TeacherListSections {
+  width: 1000px;
+  margin: auto;
+  margin-top: 30px;
+  padding: 0 10px;
+}
+
+.TeacherListSections__header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 30px;
+}
+
+.TeacherListSections__search-sections {
+  flex-grow: 1;
+}
+
+.TeacherListSections__add-section {
+  background-color: $primary-color !important;
+  color: white !important;
+  margin-left: 10px !important;
+}
+
+@media only screen and (max-width: 1100px) {
+  .TeacherListSections {
+    width: calc(100% - 20px);
+  }
+}
