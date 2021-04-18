@@ -131,10 +131,11 @@ export const createCategory = (data = {
     description: ''
 }): AppThunk => async (dispatch, getState) => {
   const state = getState();
-  const { authenticationReducer } = state;
-  const { accessToken } = authenticationReducer;
+  const { adminAuthorizationReducer } = state;
+  console.log(adminAuthorizationReducer)
+  const { adminToken } = adminAuthorizationReducer;
 
-  const response = await createCatAPI( accessToken, data);
+  const response = await createCatAPI( adminToken, data);
   if (!isResponseError(response)) {
     return dispatch(addCategory(response.data.category));
   }

@@ -89,6 +89,11 @@ export const loginWithGoogle = (): AppThunk => async (dispatch) => {
 
 export const getAccessToken = (): AppThunk => async (dispatch) => {
   const refreshToken = localStorage.getItem(localStorageKeys.refreshToken);
+  if (!refreshToken || refreshToken === "") {
+    dispatch(loginFailed(''));
+    dispatch(setAccessToken(''));
+    return localStorage.clear();
+  }
   const response = await getAccessTokenApi(refreshToken);
   if (isResponseError(response)) {
     dispatch(loginFailed(''));

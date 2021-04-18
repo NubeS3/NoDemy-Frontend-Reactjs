@@ -2,63 +2,50 @@ import { Button, Grid, Paper, TextField, Typography } from "@material-ui/core"
 import { useEffect, useState } from "react";
 import { connect, ConnectedProps } from 'react-redux';
 import { Link, Redirect, withRouter } from "react-router-dom";
-import isEmail from 'validator/lib/isEmail';
 
 import '../../styles/components/Login.scss';
 
 import loading from '../../assets/loadings/small-secondary.loading.gif';
-import googleLogo from '../../assets/google/g-logo.png';
 
-import { loginWithNodemy, loginWithGoogle } from '../../reducers/authorization.reducer';
 import { RootState } from "../../reducers/root.reducer";
 import paths from "../../configs/paths.config";
 
-import PageWrapper from "../common/PageWrapper";
-import { NavBarLink } from "../common/NavBar";
 import RouterProps from "../../types/RouterProps.type";
+import {loginAdmin} from "../../reducers/adminAuthorization.reducer";
 
 const mapStateToProps = (state: RootState) => ({
-  loginError: state.authorizationReducer.error,
-  refreshToken: state.authorizationReducer.refreshToken,
+  adminToken: state.adminAuthorizationReducer.adminToken,
+  loginError: state.adminAuthorizationReducer.error,
 });
 
 const mapDispatchToProps = {
-  loginWithNodemy,
-  loginWithGoogle,
+  loginAdmin,
 };
 
 const connector = connect(mapStateToProps, mapDispatchToProps);
 
-type LoginProps = ConnectedProps<typeof connector> & RouterProps;
+type AdminLoginProps = ConnectedProps<typeof connector> & RouterProps;
 
-const AdminLogin = (props: LoginProps) => {
-  const [email, changeEmail] = useState('');
+const AdminLogin = (props: AdminLoginProps) => {
+  const [adminUsername, changeAdminUsername] = useState('');
   const [password, changePassword] = useState('');
 
   const [logging, setIsLogging] = useState(false);
   const [error, setError] = useState('');
 
   const validateData = () => {
-    if (!email.trim()) {
-      return 'Email is required!';
+    if (!adminUsername.trim()) {
+      return 'Admin username is required!';
     }
 
-    if (email.trim().length > 100) {
-      return 'Email can not contain more than 100 characters!';
-    }
-
-    if (!isEmail(email.trim())) {
-      return 'Email is invalid!';
-    }
-
-    if (password.trim().length < 8) {
-      return 'Unable to login!';
+    if (adminUsername.trim().length > 100) {
+      return 'Admin username  can not contain more than 100 characters!';
     }
 
     return '';
   };
 
-  const onHandleLoginWithNodemy = async () => {
+  const onHandleLoginAdmin = async () => {
     const errorMessage = validateData();
     setError(errorMessage);
 
@@ -68,15 +55,10 @@ const AdminLogin = (props: LoginProps) => {
 
     setIsLogging(true);
 
-    props.loginWithNodemy({
-      email,
+    props.loginAdmin({
+      adminUsername,
       password,
     });
-  };
-
-  const onHandleLoginWithGoogle = async () => {
-    setIsLogging(true);
-    props.loginWithGoogle();
   };
 
   useEffect(() => {
@@ -84,17 +66,9 @@ const AdminLogin = (props: LoginProps) => {
     setIsLogging(false);
   }, [props.loginError]);
 
-  if (props.refreshToken) {
-    return <Redirect to={paths.base} />
+  if (props.adminToken) {
+    return <Redirect to={paths.admin} />
   }
-
-  const links: Array<NavBarLink> = [{
-    name: 'Home',
-    url: paths.base,
-  }, {
-    name: 'Login',
-    url: paths.login,
-  }];
 
   return (
    // <PageWrapper links={links} history={props.history}>
@@ -108,12 +82,11 @@ const AdminLogin = (props: LoginProps) => {
 
               <TextField
                 className="Login__text-field"
-                label="Email"
+                label="Admin Username"
                 variant="outlined"
-                type="email"
                 required
-                value={email}
-                onChange={(e) => changeEmail(e.target.value)}
+                value={adminUsername}
+                onChange={(e) => changeAdminUsername(e.target.value)}
               />
 
               <TextField
@@ -129,21 +102,10 @@ const AdminLogin = (props: LoginProps) => {
               <Button
                 className="Login__button"
                 variant="contained"
-                onClick={onHandleLoginWithNodemy}
+                onClick={onHandleLoginAdmin}
                 disabled={logging}
               >
                 { !logging ? 'Login' : <img src={loading} alt="loading..." height={23} /> }
-              </Button>
-
-              <Typography className="Login__description Login__description--margin">or</Typography>
-
-              <Button
-                className="Login__google-button"
-                variant="contained"
-                disabled={logging}
-                onClick={onHandleLoginWithGoogle}
-              >
-                <img src={googleLogo} alt="G" height={23} style={{ marginRight: 24 }} /> Sign in with Google
               </Button>
             </Paper>
 

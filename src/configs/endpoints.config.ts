@@ -57,6 +57,7 @@ const endpoints = {
   removeFromWishlist: () => `${base}/users/remove-course-from-wishlist`,
   getOwnSections: (courseId: string) => `${base}/sections/me/${courseId}`,
   getBoughtCourses: () => `${base}/users/bought`,
+  loginAdmin: () => `${base}/admin/login`
 };
 
 export default endpoints;

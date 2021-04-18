@@ -1,5 +1,6 @@
-import { combineReducers } from '@reduxjs/toolkit';
+import {combineReducers} from '@reduxjs/toolkit';
 
+import adminAuthorizationReducer from "./adminAuthorization.reducer";
 import authorizationReducer from './authorization.reducer';
 import authenticationReducer from './authentication.reducer';
 import accountReducer from './account.reducer';
@@ -22,26 +23,27 @@ import wishlistReducer from './wishlist.reducer';
 import boughtCoursesReducer from './boughtCourses.reducer';
 
 const rootReducer = combineReducers({
-  usersReducer,
-  authorizationReducer,
-  authenticationReducer,
-  accountReducer,
-  hotCoursesReducer,
-  newCoursesReducer,
-  topViewedCoursesReducer,
-  categoriesReducer,
-  listCoursesReducer,
-  listCoursesAdminReducer,
-  courseReducer,
-  ratingsReducer,
-  ratingReducer,
-  teacherCoursesReducer,
-  coursesSameCategoryReducer,
-  teacherCourseReducer,
-  teacherCourseContentsReducer,
-  teacherLectures,
-  wishlistReducer,
-  boughtCoursesReducer,
+    adminAuthorizationReducer,
+    usersReducer,
+    authorizationReducer,
+    authenticationReducer,
+    accountReducer,
+    hotCoursesReducer,
+    newCoursesReducer,
+    topViewedCoursesReducer,
+    categoriesReducer,
+    listCoursesReducer,
+    listCoursesAdminReducer,
+    courseReducer,
+    ratingsReducer,
+    ratingReducer,
+    teacherCoursesReducer,
+    coursesSameCategoryReducer,
+    teacherCourseReducer,
+    teacherCourseContentsReducer,
+    teacherLectures,
+    wishlistReducer,
+    boughtCoursesReducer,
 });
 
 export type RootState = ReturnType<typeof rootReducer>;
