@@ -1,5 +1,5 @@
 //const base: string = 'https://nodemy-apis.online';
-const base: string = 'http://localhost:8080';
+const base: string = 'http://localhost:8081';
 const endpoints = {
     base: base,
     getUsersEndPoint: (page = 1, email = '') => `${base}/users?email=${email}&page=${page}`,
@@ -59,7 +59,8 @@ const endpoints = {
     getBoughtCourses: () => `${base}/users/bought`,
     loginAdmin: () => `${base}/admin/login`,
     addLectureStaging: () => `${base}/lectures/staging`,
-    addLectureConfirm: (lectureId: string) => `${base}/lectures/ready/${lectureId}`
+    addLectureConfirm: (lectureId: string) => `${base}/lectures/ready/${lectureId}`,
+    getVideoUrl: (lectureId: string) => `${base}/lectures/${lectureId}/video`
 };
 
 export default endpoints;

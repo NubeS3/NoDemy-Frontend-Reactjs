@@ -35,6 +35,7 @@ export const fetchOwnListCourses = (): AppThunk => async (dispatch, getState) =>
   const { authenticationReducer } = state;
 
   const response = await getOwnListCoursesApi(authenticationReducer.accessToken);
+  console.log(response);
   if (isResponseError(response)) {
     return dispatch(clearListCourses());
   }

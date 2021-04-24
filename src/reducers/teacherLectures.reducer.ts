@@ -118,7 +118,7 @@ export const addLecture = (
         return dispatch(setError(uploadResponse.error));
     }
 
-    const confirmResponse = await addLectureConfirmApi(authenticationReducer.accessToken, stagingResponse.data._id);
+    const confirmResponse = await addLectureConfirmApi(authenticationReducer.accessToken, stagingResponse.data.id);
 
     dispatch(setIsUploading(false));
     dispatch(setIsModifying(false));

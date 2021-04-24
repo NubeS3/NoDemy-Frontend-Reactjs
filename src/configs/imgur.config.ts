@@ -1,6 +1,6 @@
 const imgurKeys = {
-  clientId: '3522189182cae7f',
-  clientSecret: '503d1864f99707b5f9d479d9baede78ceec61600',
+  clientId: '3d1119268d2fba2',
+  clientSecret: 'b7c76ad4147cd1fdae5833360219c733eae8ab32',
 };
 
 export default imgurKeys;

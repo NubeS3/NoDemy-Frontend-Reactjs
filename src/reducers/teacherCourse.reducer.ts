@@ -101,6 +101,7 @@ export const addTeacherCourse = (course: AddCourse): AppThunk => async (dispatch
   dispatch(setIsModifying(true));
   const response = await addCourseApi(authenticationReducer.accessToken, course);
   dispatch(setIsModifying(false));
+  console.log(response)
   if (isResponseError(response)) {
     return dispatch(setError(response.error));
   }

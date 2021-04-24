@@ -3,19 +3,19 @@ import endpoints from "../configs/endpoints.config";
 import ResponseError from "../types/ResponseError.type";
 import ResponseSuccess from '../types/ResponseSuccess.type';
 
-const addLectureConfirmApi = async (accessToken: string,
-                                    id: string) => {
+const getLectureVideoApi = async (accessToken: string,
+                                  id: string) => {
     try {
-        const response = await api.patch(endpoints.addLectureConfirm(id), {}, {
+        const response = await api.get(endpoints.getVideoUrl(id), {
             headers: {
                 'Nodemy-Authentication': accessToken,
-            },
+            }
         });
-        const lecture: ResponseSuccess = {
+        const urlData: ResponseSuccess = {
             code: response.status,
             data: response.data,
         };
-        return lecture;
+        return urlData;
     } catch (error) {
         const errorObj: ResponseError = {
             code: error.response.status,
@@ -26,4 +26,4 @@ const addLectureConfirmApi = async (accessToken: string,
     }
 };
 
-export default addLectureConfirmApi;
+export default getLectureVideoApi;
