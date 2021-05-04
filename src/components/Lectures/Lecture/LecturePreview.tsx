@@ -10,7 +10,6 @@ type LecturePreviewProps = {
 
 const LecturePreview = ({ lecture }: LecturePreviewProps) => {
   const [openPreviewVideo, setOpenPreviewVideo] = useState(false);
-
   return (
     <>
       <div

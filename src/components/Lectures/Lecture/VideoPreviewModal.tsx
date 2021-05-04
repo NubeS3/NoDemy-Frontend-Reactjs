@@ -27,14 +27,25 @@ type VideoPreviewModalProps = ConnectedProps<typeof connector> & {
     lecture: Lecture;
 };
 
-const VideoPreviewModal = ({open, onClose, lecture, accessToken, videoUrl, getLectureVideoUrl}: VideoPreviewModalProps) => {
+const VideoPreviewModal = ({
+                               open,
+                               onClose,
+                               lecture,
+                               accessToken,
+                               videoUrl,
+                               getLectureVideoUrl
+                           }: VideoPreviewModalProps) => {
     const {width} = useWindowDimensions();
+    //
+    // useEffect(() => {
+    //     getLectureVideoUrl(lecture._id);
+    // }, [lecture._id])
 
     useEffect(() => {
-        getLectureVideoUrl(lecture._id);
-    }, [lecture._id])
-
-    console.log(videoUrl)
+        if (open) {
+            getLectureVideoUrl(lecture._id);
+        }
+    }, [open])
 
     return (
         <Modal
