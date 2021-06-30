@@ -195,7 +195,7 @@ export const setCurrentLearningLecture = (lectureId: string): AppThunk => (dispa
 
 export const getLectureVideoUrl = (lectureId: string): AppThunk => async (dispatch, getState) => {
     const state = getState();
-    const { authenticationReducer} = state;
+    const { authenticationReducer } = state;
     const response = await getLectureVideoApi(authenticationReducer.accessToken, lectureId);
     if (!isResponseError(response)) {
         dispatch(setCurrentLectureUrl(response.data.url));

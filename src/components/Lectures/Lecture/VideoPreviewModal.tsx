@@ -47,6 +47,9 @@ const VideoPreviewModal = ({
         }
     }, [open])
 
+    console.log("vid")
+    console.log(videoUrl)
+
     return (
         <Modal
             open={open}

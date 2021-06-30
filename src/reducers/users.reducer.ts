@@ -7,6 +7,7 @@ import upgradeUserAPI from '../apis/upgradeUser.api';
 import banUserAPI from '../apis/banUser.api';
 import unbanUserAPI from '../apis/unbanUser.api';
 import downgradeUserAPI from '../apis/downgradeUser.api';
+import adminAuthorizationReducer from "./adminAuthorization.reducer";
 
 const initialState = {
     users: Array<User>(),
@@ -37,10 +38,10 @@ export const {
 
 export const getUsersAndTeachers = (): AppThunk => async (dispatch, getState) => {
     const state = getState();
-    const { authenticationReducer } = state;
-    const { accessToken } = authenticationReducer;
+    const { adminAuthorizationReducer } = state;
+    const { adminToken } = adminAuthorizationReducer;
 
-    const response = await getAllUsers(accessToken);
+    const response = await getAllUsers(adminToken);
 
     if (isResponseError(response)) {
         return dispatch(setUsers([]));
@@ -51,10 +52,10 @@ export const getUsersAndTeachers = (): AppThunk => async (dispatch, getState) =>
 
 export const upgradeUser = (userId: string): AppThunk => async (dispatch, getState) => {
   const state = getState();
-  const { authenticationReducer, usersReducer } = state;
-  const { accessToken } = authenticationReducer;
+  const { adminAuthorizationReducer, usersReducer } = state;
+  const { adminToken } = adminAuthorizationReducer;
 
-  const response = await upgradeUserAPI(accessToken, userId);
+  const response = await upgradeUserAPI(adminToken, userId);
 
   if (!isResponseError(response)) {
     const temp = usersReducer.users.filter(user => user._id === userId);
@@ -69,10 +70,10 @@ export const upgradeUser = (userId: string): AppThunk => async (dispatch, getSta
 
 export const downgradeUser = (userId: string): AppThunk => async (dispatch, getState) => {
   const state = getState();
-  const { authenticationReducer, usersReducer } = state;
-  const { accessToken } = authenticationReducer;
+  const { adminAuthorizationReducer, usersReducer } = state;
+  const { adminToken } = adminAuthorizationReducer;
 
-  const response = await downgradeUserAPI(accessToken, userId);
+  const response = await downgradeUserAPI(adminToken, userId);
 
   if (!isResponseError(response)) {
     const temp = usersReducer.users.filter(user => user._id === userId);
@@ -87,10 +88,10 @@ export const downgradeUser = (userId: string): AppThunk => async (dispatch, getS
 
 export const banUser = (userId: string): AppThunk => async (dispatch, getState) => {
   const state = getState();
-  const { authenticationReducer, usersReducer } = state;
-  const { accessToken } = authenticationReducer;
+  const { adminAuthorizationReducer, usersReducer } = state;
+  const { adminToken } = adminAuthorizationReducer;
 
-  const response = await banUserAPI(accessToken, userId);
+  const response = await banUserAPI(adminToken, userId);
 
   if (!isResponseError(response)) {
     const temp = usersReducer.users.filter(user => user._id === userId);
@@ -105,10 +106,10 @@ export const banUser = (userId: string): AppThunk => async (dispatch, getState) 
 
 export const unbanUser = (userId: string): AppThunk => async (dispatch, getState) => {
   const state = getState();
-  const { authenticationReducer, usersReducer } = state;
-  const { accessToken } = authenticationReducer;
+  const { adminAuthorizationReducer, usersReducer } = state;
+  const { adminToken } = adminAuthorizationReducer;
 
-  const response = await unbanUserAPI(accessToken, userId);
+  const response = await unbanUserAPI(adminToken, userId);
 
   if (!isResponseError(response)) {
     const temp = usersReducer.users.filter(user => user._id === userId);

@@ -85,7 +85,7 @@ const MenuHeaderMobile = ({
       accessToken &&
       <div className="MenuHeaderMobile__user-info" style={{ cursor: 'pointer' }}>
         <div className="MenuHeaderMobile__avatar" onClick={() => history.push(paths.userProfile)}>
-          <img src={user.avatar} alt="avatar" />
+          <img src={`data:image/jpeg;base64,${user.avatar}`} alt="avatar" />
         </div>
         <div className="MenuHeaderMobile__text" onClick={() => history.push(paths.userProfile)}>
           <p className="MenuHeaderMobile__fullname">{user.fullname}</p>

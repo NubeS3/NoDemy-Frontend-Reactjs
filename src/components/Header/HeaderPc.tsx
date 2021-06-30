@@ -52,6 +52,8 @@ const HeaderPc = ({ user, accessToken, history }: HeaderPcType) => {
     }
   };
 
+  console.log(user)
+
   return (
     <div className="HeaderPc">
       <Link className="HeaderPc__logo-link" to={paths.base}>
@@ -175,7 +177,7 @@ const HeaderPc = ({ user, accessToken, history }: HeaderPcType) => {
           onMouseEnter={() => setIsHoveringAvatar(true)}
           onMouseLeave={() => setIsHoveringAvatar(false)}
         >
-          <img src={user.avatar} alt={`${user.fullname}`} height={50} />
+          <img src={`data:image/jpeg;base64,${user.avatar}`} alt={`${user.fullname}`} height={50} />
         </Link>
       }
 

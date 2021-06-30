@@ -35,7 +35,7 @@ const UserMenuPc = ({ isHoveringAvatar, setIsHoveringAvatar, user, logout, acces
     >
       <div className="UserMenuPc__basic-info">
         <div className='UserMenuPc__avatar' onClick={() => history.push(paths.userProfile)}>
-          <img src={user.avatar} alt="" />
+          <img src={`data:image/jpeg;base64,${user.avatar}`} alt="" />
         </div>
         <div className="UserMenuPc__info" onClick={() => history.push(paths.userProfile)}>
           <Typography className="UserMenuPc__info__text UserMenuPc__info__text--fullname">

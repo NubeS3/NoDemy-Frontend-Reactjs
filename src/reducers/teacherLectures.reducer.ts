@@ -106,8 +106,9 @@ export const addLecture = (
     const vidData = new FormData();
     vidData.append("file", video);
     vidData.append("name", stagingResponse.data.id);
+    vidData.append("bucket_id", stagingResponse.data.uploadUrl.bucket_id);
 
-    const uploadResponse = await addLectureUploadVideoApi(stagingResponse.data.uploadUrl, vidData, (progress => {
+    const uploadResponse = await addLectureUploadVideoApi(stagingResponse.data.uploadUrl.resUrl, stagingResponse.data.uploadUrl.token, vidData, (progress => {
         dispatch(setUploadingProgress(progress.loaded));
     }));
 

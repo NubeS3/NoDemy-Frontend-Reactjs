@@ -1,6 +1,6 @@
 //const base: string = 'https://nodemy-apis.online';
-// const base: string = 'http://localhost:8081';
-const base: string = 'https://ourdemy.xyz';
+const base: string = 'http://localhost:8081';
+// const base: string = 'https://ourdemy.xyz';
 const endpoints = {
     base: base,
     getUsersEndPoint: (page = 1, email = '') => `${base}/users?email=${email}&page=${page}`,

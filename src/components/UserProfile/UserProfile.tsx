@@ -200,7 +200,7 @@ const UserProfile = (props: ProfileProps) => {
                             >
                                 {
                                     !isUploadingImage && avatar &&
-                                    <img src={avatar} alt="" />
+                                    <img src={`data:image/jpeg;base64,${avatar}`} alt="" />
                                 }
                                 {
                                     !isUploadingImage &&

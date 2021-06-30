@@ -32,9 +32,9 @@ export const {
 
 export const fetchListCourses = (): AppThunk => async (dispatch, getState) => {
   const state = getState();
-  const { authenticationReducer } = state;
+  const { adminAuthorizationReducer } = state;
 
-  const response = await getListCoursesAdminApi(authenticationReducer.accessToken);
+  const response = await getListCoursesAdminApi(adminAuthorizationReducer.adminToken);
 
   if (isResponseError(response)) {
     return dispatch(clearListCourses());
@@ -47,9 +47,9 @@ export const fetchListCourses = (): AppThunk => async (dispatch, getState) => {
 
 export const deleteCourse = (courseId: string): AppThunk => async (dispatch, getState) => {
   const state = getState();
-  const { authenticationReducer, listCoursesAdminReducer } = state;
+  const { adminAuthorizationReducer, listCoursesAdminReducer } = state;
 
-  const response = await deleteCourseApi(authenticationReducer.accessToken, courseId);
+  const response = await deleteCourseApi(adminAuthorizationReducer.adminToken, courseId);
   if (!isResponseError(response)) {
     dispatch(setListCourses({
         listCourses: listCoursesAdminReducer.listCourses.filter(course => course._id !== courseId),
